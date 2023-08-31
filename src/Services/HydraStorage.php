@@ -10,7 +10,7 @@ class HydraStorage
 
     protected static $defaultOptions =
     [
-        'peview' =>  true,
+        'preview' =>  true,
         'dropQuality' =>  false,
         'resize' =>  false,
         'size' =>  500,
@@ -125,7 +125,7 @@ class HydraStorage
         ->modifySize($photoOption['size'])->modifyImage();
 
         Storage::disk($provider)->put('public/' . $path . '/' . $photoName, $mainPhoto);
-        $photoOption['peview'] && Storage::disk($provider)->put('public/preview//' . $path . '/'  . $photoName, $previewImage->stream());
+        $photoOption['preview'] && Storage::disk($provider)->put('public/preview//' . $path . '/'  . $photoName, $previewImage->stream());
     }
 
 }
