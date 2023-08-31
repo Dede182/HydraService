@@ -1,0 +1,21 @@
+{
+    "name": "htetshine/hydra-service",
+    "description": "for helping with services",
+    "autoload": {
+        "psr-4": {
+            "HydraService\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dede182"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HydraService\\Provider\\HydraServiceProvider"
+            ]
+        }
+    }
+}
